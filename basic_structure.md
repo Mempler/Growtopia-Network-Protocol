@@ -40,7 +40,7 @@ a Tank packet contains 2 sub structures, the `Tank Packet Header` where all the 
 ### Known Tank Types
 
 ```cpp
-enum E_PacketType {
+enum E_TankType {
     Movement     = 0x00,
     VariantList  = 0x01,
     TileChange   = 0x03,
