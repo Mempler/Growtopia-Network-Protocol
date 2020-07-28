@@ -97,8 +97,8 @@ a Tank packet header looks like as followed
 
 ```cpp
 typedef struct {
-    uint32_t TankType;
-    int32_t  NetId;
+    uint32_t TankData; // byte 1 = TankType, byte 2..4 data
+    int32_t  PlayerFlags;
     uint32_t pd1; // Padding
     uint32_t CharacterState;
     uint32_t pd2; // Padding
@@ -120,8 +120,8 @@ Tank packet data can vary a lot! an example would be (and also the easiest one) 
 
 ```cpp
 typedef struct {
-    uint32_t TankType         = 0x00;
-    int32_t  NetId            = TargetId;
+    uint32_t TankData         = 0x00 | 0x00 | 0x00 | 0x00; // byte 1 = TankType, byte 2..4 data
+    int32_t  PlayerFlags      = TargetId;
     uint32_t pd1              = 0x00; // Padding
     uint32_t CharacterState   = TargetState;
     uint32_t pd2              = 0x00; // Padding
