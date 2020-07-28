@@ -33,7 +33,7 @@ enum E_PacketType {
     STextPacket             = 0x03, // Server
     TankPacket              = 0x04,
     
-    // TODO: figure out what those does:
+    // TODO: figure out what those do:
     GameError               = 0x05,
     ClientLogRequest        = 0x06,
     ClientLogResponse       = 0x07
@@ -48,15 +48,48 @@ a Tank packet contains 2 sub structures, the `Tank Packet Header` where all the 
 
 ```cpp
 enum E_TankType {
-    Movement     = 0x00,
-    VariantList  = 0x01,
-    TileChange   = 0x03,
-    World        = 0x04,
-    SendTile     = 0x05,
-    UpdateTile   = 0x06,
-    Inventory    = 0x09,
-    ItemDatabase = 0x10,
-};
+    UpdateState                    = 0x00,
+    CallFunction                   = 0x01,
+    UpdateStatus                   = 0x02,
+    UpdateTileRequest              = 0x03,
+    SendWorld                      = 0x04,
+    SendTileUpdate                 = 0x05,
+    SendMultipleTileUpdates        = 0x06, // Cluster multiple tile updates together
+    RequestActiveTile              = 0x07,
+    ApplyTileDamage                = 0x08,
+    SendInventory                  = 0x09,
+    ItemDatabaseRequest            = 0x10,
+    ItemDatabaseResponse           = 0x11, // TODO: This could be wrong. original was `ITEM_ACTIVATE_OBJECT_REQUEST`
+    SendTileTreeState              = 0x12,
+    ModifyInventoryItem            = 0x13,
+    Disconnect                     = 0x26,
+    UseDoor                        = 0x29,
+
+    // TODO: check those and give them proper names:
+    ITEM_CHANGE_OBJECT             = 0x14,
+    SEND_LOCK                      = 0x15,
+    SEND_ITEM_DATABASE_DATA        = 0x16,
+    SEND_PARTICLE_EFFECT           = 0x17,
+    SET_ICON_STATE                 = 0x18,
+    ITEM_EFFECT                    = 0x19,
+    SET_CHARACTER_STATE            = 0x20,
+    PING_REPLY                     = 0x21,
+    PING_REQUEST                   = 0x22,
+    GOT_PUNCHED                    = 0x23,
+    APP_CHECK_RESPONSE             = 0x24,
+    APP_INTEGRITY_FAIL             = 0x25,
+    BATTLE_JOIN                    = 0x27,
+    BATTLE_EVENT                   = 0x28,
+    SEND_PARENTAL                  = 0x29,
+    GONE_FISHIN                    = 0x30,
+    STEAM                          = 0x31,
+    PET_BATTLE                     = 0x32,
+    NPC                            = 0x33,
+    SPECIAL                        = 0x34,
+    SEND_PARTICLE_EFFECT_V2        = 0x35,
+    ARROW_TO_ITEM                  = 0x36,
+    TILE_INDEX                     = 0x37
+}
 ```
 
 ### Tank Packet Header
