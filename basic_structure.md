@@ -9,8 +9,6 @@
     - [Tank Packet Data](#tank-packet-data)
   - [Text Packet](#text-packet)
 
----
-
 ## Basic Structure
 
 Growtopia's packet structure is quite a complex one but also quite simple for an MMO RPG
