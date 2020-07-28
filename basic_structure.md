@@ -56,12 +56,10 @@ enum E_TankType {
     RequestActiveTile              = 0x07,
     ApplyTileDamage                = 0x08,
     SendInventory                  = 0x09,
-    ItemDatabaseRequest            = 0x10,
+    ItemDatabaseRequest            = 0x10, // i just noticed, i failed to count properly, TODO: Fix
     ItemDatabaseResponse           = 0x11, // TODO: This could be wrong. original was `ITEM_ACTIVATE_OBJECT_REQUEST`
     SendTileTreeState              = 0x12,
     ModifyInventoryItem            = 0x13,
-    Disconnect                     = 0x26,
-    UseDoor                        = 0x29,
 
     // TODO: check those and give them proper names:
     ITEM_CHANGE_OBJECT             = 0x14,
@@ -76,17 +74,19 @@ enum E_TankType {
     GOT_PUNCHED                    = 0x23,
     APP_CHECK_RESPONSE             = 0x24,
     APP_INTEGRITY_FAIL             = 0x25,
+    Disconnect                     = 0x26,
     BATTLE_JOIN                    = 0x27,
     BATTLE_EVENT                   = 0x28,
-    SEND_PARENTAL                  = 0x29,
-    GONE_FISHIN                    = 0x30,
-    STEAM                          = 0x31,
-    PET_BATTLE                     = 0x32,
-    NPC                            = 0x33,
-    SPECIAL                        = 0x34,
-    SEND_PARTICLE_EFFECT_V2        = 0x35,
-    ARROW_TO_ITEM                  = 0x36,
-    TILE_INDEX                     = 0x37
+    UseDoor                        = 0x29,
+    SEND_PARENTAL                  = 0x30,
+    GONE_FISHIN                    = 0x31,
+    STEAM                          = 0x32,
+    PET_BATTLE                     = 0x33,
+    NPC                            = 0x34,
+    SPECIAL                        = 0x35,
+    SEND_PARTICLE_EFFECT_V2        = 0x36,
+    ARROW_TO_ITEM                  = 0x37,
+    TILE_INDEX                     = 0x38
 }
 ```
 
