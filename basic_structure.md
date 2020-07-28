@@ -86,7 +86,8 @@ enum E_TankType {
     SPECIAL                        = 0x35,
     SEND_PARTICLE_EFFECT_V2        = 0x36,
     ARROW_TO_ITEM                  = 0x37,
-    TILE_INDEX                     = 0x38
+    TILE_INDEX                     = 0x38,
+    SEND_PLAYER_TRIBUTE_DATA       = 0x39,
 }
 ```
 
