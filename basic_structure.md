@@ -27,9 +27,16 @@ typedef struct {
 
 ```cpp
 enum E_PacketType {
+    Unknown                 = 0x00,
     LoginInformationRequest = 0x01,
-    TextPacket              = 0x03,
-    TankPacket              = 0x04
+    CTextPacket             = 0x02, // Client
+    STextPacket             = 0x03, // Server
+    TankPacket              = 0x04,
+    
+    // TODO: figure out what those does:
+    GameError               = 0x05,
+    ClientLogRequest        = 0x06,
+    ClientLogResponse       = 0x07
 };
 ```
 
